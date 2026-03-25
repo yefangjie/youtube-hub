@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -51,7 +50,6 @@
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #0f62fe, #4589ff);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -59,8 +57,10 @@
             font-size: 1.8em;
             font-weight: bold;
             margin-right: 20px;
-            box-shadow: 0 4px 15px rgba(15, 98, 254, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
+        .channel-avatar.ibm { background: linear-gradient(135deg, #0f62fe, #4589ff); }
+        .channel-avatar.lt { background: linear-gradient(135deg, #e74c3c, #c0392b); }
         .channel-info h2 {
             font-size: 1.8em;
             color: #333;
@@ -101,27 +101,6 @@
             height: 100%;
             border: none;
         }
-        .add-channel {
-            background: rgba(255,255,255,0.9);
-            border: 3px dashed #667eea;
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .add-channel:hover {
-            background: rgba(255,255,255,1);
-            border-color: #764ba2;
-        }
-        .add-channel h3 {
-            color: #667eea;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .add-channel p {
-            color: #888;
-        }
         footer {
             text-align: center;
             padding: 40px;
@@ -142,10 +121,47 @@
     </div>
     
     <div class="container">
+        <!-- LT視界 频道 -->
+        <div class="channel-section">
+            <div class="channel-header">
+                <div class="channel-avatar lt">L</div>
+                <div class="channel-info">
+                    <h2>LT視界</h2>
+                    <p>分享《今天不能錯過的重要新聞》，用邏輯和常識看世界。聚焦國際政治、地緣政治分析。</p>
+                    <a href="https://youtube.com/@ltshijie" target="_blank">
+                        🔗 youtube.com/@ltshijie
+                    </a>
+                </div>
+            </div>
+            
+            <div class="videos-container">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUOsQMj_MZkQ5N7f1OOMB87Q&index=1" 
+                            allowfullscreen 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
+                </div>
+                
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUOsQMj_MZkQ5N7f1OOMB87Q&index=2" 
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
+                </div>
+                
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUOsQMj_MZkQ5N7f1OOMB87Q&index=3" 
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
         <!-- IBM Technology 频道 -->
         <div class="channel-section">
             <div class="channel-header">
-                <div class="channel-avatar">I</div>
+                <div class="channel-avatar ibm">I</div>
                 <div class="channel-info">
                     <h2>IBM Technology</h2>
                     <p>IBM's official technology channel covering AI, cloud, quantum computing and enterprise solutions</p>
@@ -156,7 +172,6 @@
             </div>
             
             <div class="videos-container">
-                <!-- 最新视频 -->
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUCKWaEZ-_VweaEx1UEiP2M8g&index=1" 
                             allowfullscreen 
@@ -178,12 +193,6 @@
                     </iframe>
                 </div>
             </div>
-        </div>
-        
-        <!-- 添加更多频道 -->
-        <div class="add-channel" onclick="alert('编辑 config.json 添加更多频道')">
-            <h3>➕ 添加新频道</h3>
-            <p>点击添加更多 YouTube 频道到聚合页面</p>
         </div>
     </div>
     
