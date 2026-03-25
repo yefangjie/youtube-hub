@@ -1,0 +1,12 @@
+{
+  "channels": [
+    {
+      "name": "IBM Technology",
+      "handle": "@IBMTechnology",
+      "channel_id": "UCKWaEZ-_VweaEx1UEiP2M8g",
+      "color": "#0f62fe",
+      "description": "IBM's official technology channel covering AI, cloud, quantum computing and enterprise solutions"
+    }
+  ],
+  "last_update": "2026-03-26T06:37:26.887900"
+}
